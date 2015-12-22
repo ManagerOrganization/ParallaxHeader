@@ -34,7 +34,7 @@ static NSString * const PH_CELL_REUSE_IDENTIFIER = @"PH_CELL_REUSE_IDENTIFIER";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PH_CELL_REUSE_IDENTIFIER forIndexPath:indexPath];
     
-    cell.imageView.image = [UIImage imageNamed:@"avata.jpeg"];
+    cell.imageView.image = [UIImage imageNamed:@"avatar"];
     cell.textLabel.text = @"我们是害虫, 我们是害虫";
     
     return cell;
@@ -51,7 +51,7 @@ static NSString * const PH_CELL_REUSE_IDENTIFIER = @"PH_CELL_REUSE_IDENTIFIER";
 - (PHDemoHeader *)tableHeader {
     if (!_tableHeader) {
         PHDemoHeader *header = [PHDemoHeader headerWithHeight:200];
-        header.image = [UIImage imageNamed:@"headerImage"];
+        header.image = [UIImage imageNamed:@"tbt"];
         header.parallaxRatio = .6;
         _tableHeader = header;
     }
