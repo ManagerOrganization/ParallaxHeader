@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		424B551B1C29207000DF4E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B551A1C29207000DF4E9A /* main.m */; };
 		424B551E1C29207000DF4E9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B551D1C29207000DF4E9A /* AppDelegate.m */; };
-		424B55211C29207000DF4E9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B55201C29207000DF4E9A /* ViewController.m */; };
 		424B55241C29207000DF4E9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 424B55221C29207000DF4E9A /* Main.storyboard */; };
 		424B55261C29207000DF4E9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 424B55251C29207000DF4E9A /* Assets.xcassets */; };
 		424B55291C29207000DF4E9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 424B55271C29207000DF4E9A /* LaunchScreen.storyboard */; };
 		424B55341C29207000DF4E9A /* ParallaxHeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B55331C29207000DF4E9A /* ParallaxHeaderTests.m */; };
 		424B553F1C29207000DF4E9A /* ParallaxHeaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B553E1C29207000DF4E9A /* ParallaxHeaderUITests.m */; };
+		424B554E1C29209400DF4E9A /* PHTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B554D1C29209400DF4E9A /* PHTableViewController.m */; };
+		424B55511C2920AB00DF4E9A /* ParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B55501C2920AB00DF4E9A /* ParallaxHeader.m */; };
+		424B55571C29438E00DF4E9A /* PHDemoHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 424B55561C29438E00DF4E9A /* PHDemoHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		424B551A1C29207000DF4E9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		424B551C1C29207000DF4E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		424B551D1C29207000DF4E9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		424B551F1C29207000DF4E9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		424B55201C29207000DF4E9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		424B55231C29207000DF4E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		424B55251C29207000DF4E9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		424B55281C29207000DF4E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		424B553A1C29207000DF4E9A /* ParallaxHeaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxHeaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		424B553E1C29207000DF4E9A /* ParallaxHeaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderUITests.m; sourceTree = "<group>"; };
 		424B55401C29207000DF4E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		424B554C1C29209400DF4E9A /* PHTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHTableViewController.h; sourceTree = "<group>"; };
+		424B554D1C29209400DF4E9A /* PHTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHTableViewController.m; sourceTree = "<group>"; };
+		424B554F1C2920AB00DF4E9A /* ParallaxHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeader.h; sourceTree = "<group>"; };
+		424B55501C2920AB00DF4E9A /* ParallaxHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeader.m; sourceTree = "<group>"; };
+		424B55551C29438E00DF4E9A /* PHDemoHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHDemoHeader.h; sourceTree = "<group>"; };
+		424B55561C29438E00DF4E9A /* PHDemoHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHDemoHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,11 @@
 			children = (
 				424B551C1C29207000DF4E9A /* AppDelegate.h */,
 				424B551D1C29207000DF4E9A /* AppDelegate.m */,
-				424B551F1C29207000DF4E9A /* ViewController.h */,
-				424B55201C29207000DF4E9A /* ViewController.m */,
+				424B554C1C29209400DF4E9A /* PHTableViewController.h */,
+				424B554D1C29209400DF4E9A /* PHTableViewController.m */,
+				424B55551C29438E00DF4E9A /* PHDemoHeader.h */,
+				424B55561C29438E00DF4E9A /* PHDemoHeader.m */,
+				424B55541C29437600DF4E9A /* ParallaxHeader */,
 				424B55221C29207000DF4E9A /* Main.storyboard */,
 				424B55251C29207000DF4E9A /* Assets.xcassets */,
 				424B55271C29207000DF4E9A /* LaunchScreen.storyboard */,
@@ -138,6 +147,15 @@
 				424B55401C29207000DF4E9A /* Info.plist */,
 			);
 			path = ParallaxHeaderUITests;
+			sourceTree = "<group>";
+		};
+		424B55541C29437600DF4E9A /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				424B554F1C2920AB00DF4E9A /* ParallaxHeader.h */,
+				424B55501C2920AB00DF4E9A /* ParallaxHeader.m */,
+			);
+			name = ParallaxHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				424B55211C29207000DF4E9A /* ViewController.m in Sources */,
+				424B55571C29438E00DF4E9A /* PHDemoHeader.m in Sources */,
 				424B551E1C29207000DF4E9A /* AppDelegate.m in Sources */,
+				424B55511C2920AB00DF4E9A /* ParallaxHeader.m in Sources */,
+				424B554E1C29209400DF4E9A /* PHTableViewController.m in Sources */,
 				424B551B1C29207000DF4E9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

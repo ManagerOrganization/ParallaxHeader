@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PHTableViewController.h
 //  ParallaxHeader
 //
 //  Created by cc on 15/12/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PHTableViewController : UITableViewController
 
 @end
-
