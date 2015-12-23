@@ -18,12 +18,21 @@
 
 @property (nonatomic, strong) PHDemoHeader *tableHeader;
 @property (nonatomic, strong) id<PHTimelineModel> timeLineModel;
+@property (nonatomic, strong) PHSegmentedControl *segmentedControl;
 
 /**
  * 实际数据来源
  */
 @property (nonatomic, strong) TherbligsViewModel *therbligsVM;
 @property (nonatomic, strong) IntroViewModel *introVM;
+
+/**
+ * 状态标识符
+ */
+@property (nonatomic, assign) BOOL needRefreshTherbligsData; // default is YES !!!, cause we dont have any cache yet
+@property (nonatomic, assign) BOOL needRefreshIntroData; // default is YES !!!, cause we dont have any cache yet
+
+@property (nonatomic, assign) CGPoint previousOffset;
 
 @end
 
@@ -37,6 +46,69 @@ static NSString * const PH_CELL_REUSE_IDENTIFIER = @"PH_CELL_REUSE_IDENTIFIER";
     [self.tableView registerClass:[PHDemoCell class] forCellReuseIdentifier:PH_CELL_REUSE_IDENTIFIER];
 
     self.tableView.tableHeaderView = self.tableHeader;
+    
+    self.needRefreshTherbligsData = YES;
+    self.needRefreshIntroData = YES;
+    [self fetching];
+}
+
+// MARK: fetching
+
+- (void)fetching {
+    switch (self.segmentedControl.selectedIndex) {
+        case 0:
+        {
+            if ([self.therbligsVM numberOfSections] && self.needRefreshTherbligsData == NO) {
+                // show data from cache, or just scroll to previous offset
+                [self scrollToAndShowDataWithinPreviousState];
+            } else {
+                // fetch from server
+                [self.therbligsVM fetchingDataWithParameters:[self therbligsParameters] succeed:^(id  _Nullable response) {
+                    [self.tableView reloadData];
+                } failed:^(NSError * _Nullable error) {
+                    // show error
+                }];
+            }
+        }
+            break;
+        case 1:
+        {
+            if ([self.introVM numberOfSections] && self.needRefreshIntroData == NO) {
+                // show data from cache, or just scroll to previous offset
+                [self scrollToAndShowDataWithinPreviousState];
+            } else {
+                // fetch from server
+                [self.introVM fetchingDataWithParameters:[self introParameters] succeed:^(id  _Nullable response) {
+                    [self.tableView reloadData];
+                } failed:^(NSError * _Nullable error) {
+                    // show error
+                }];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (NSDictionary *)therbligsParameters {
+    NSDictionary *dic = [NSDictionary new];
+    return dic;
+}
+
+- (NSDictionary *)introParameters {
+    NSDictionary *dic = [NSDictionary new];
+    return dic;
+}
+
+// MARK: scrolls
+
+- (void)scrollToAndShowDataWithinPreviousState {
+    // we already switched data, remember?
+    
+    // so we (may)just RECOVER the previous state
+    [self.tableView setContentOffset:self.previousOffset animated:NO]; // NO!!! cause we dont want somebody feel bad.
 }
 
 // MARK: segmented control delegate

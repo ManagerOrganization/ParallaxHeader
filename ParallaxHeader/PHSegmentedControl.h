@@ -18,5 +18,6 @@
 @interface PHSegmentedControl : UIControl
 
 @property (nonatomic, weak) id<PHSegmentedControlDelegate> delegate;
+@property (nonatomic, assign) NSInteger selectedIndex; // default is 0
 
 @end
